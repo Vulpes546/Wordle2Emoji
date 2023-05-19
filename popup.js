@@ -1,7 +1,7 @@
 const btn = document.querySelector("button.get");
 const btnCopy = document.querySelector("button.copy");
 const body = document.querySelector("body");
-const resultP = document.querySelector(".result");
+const resultDiv = document.querySelector(".result");
 
 let resultString = "";
 
@@ -28,11 +28,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	// Check if the message contains the data sent from the content script
 	if (message.data) {
 		// Access the data and do something with it
+		resultDiv.innerHTML = "";
 		message.data.forEach((row) => {
 			const rowP = document.createElement("p");
 			rowP.classList.add("row");
 			rowP.textContent = row;
-			resultP.appendChild(rowP);
+			resultDiv.appendChild(rowP);
 			resultString += row + "\n";
 			resultString.replace(/(^\s*(?!.+)\n+)|(\n+\s+(?!.+)$)/g, "");
 		});
