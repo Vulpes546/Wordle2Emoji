@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello</title>
+  <style>
+    body {
+      min-width: 357px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #121213;
+      color: #fffefe;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .result {
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .result>p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      line-height: 100%;
+      font-size: 20px;
+      border-radius: 20px;
+      border: #fffefe 1px solid;
+      background-color: #121213;
+      color: #fffefe;
+    }
+
+    button.copy {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Wordle2Emoji</h1>
+  <button disabled class="get">Get my wordle</button>
+  <div class="result"></div>
+  <button class="copy" style="display: none;">Copy</button>
+</body>
+
+<script src="./popup.js"></script>
+
+</html>

@@ -1,0 +1,28 @@
+{
+	"name": "Wordle2Emoji",
+	"version": "1.0",
+	"description": "Converts your wordle to emoji",
+	"permissions": ["activeTab"],
+	"content_scripts": [
+		{
+			"matches": ["https://www.nytimes.com/games/wordle/index.html"],
+			"js": ["content.js"]
+		}
+	],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "/img/icon-16.png",
+			"48": "/img/icon-48.png",
+			"128": "/img/icon-128.png"
+		},
+		"default_title": "Wordle2Emoji"
+	},
+	"icons": {
+		"16": "/img/icon-16.png",
+		"48": "/img/icon-48.png",
+		"128": "/img/icon-128.png"
+	},
+	"author": "Jakub Lis",
+	"manifest_version": 2
+}
